@@ -11,6 +11,11 @@ module VagrantPlugins
         Guest
       end
 
+      guest_capability("osx", "change_host_name") do
+        require_relative "cap/change_host_name"
+        Cap::ChangeHostName
+      end
+
       guest_capability("osx", "halt") do
         require_relative "cap/halt"
         Cap::Halt
